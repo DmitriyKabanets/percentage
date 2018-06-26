@@ -1,0 +1,41 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 700px;
+    margin: 0 auto;
+}
+.percentage {
+    width: 200px;
+    transform: rotate(-90deg); /*  Поворот на 90 градусов, для отображения начала сверху */
+}
+
+.circle {
+    fill: transparent;
+    stroke-width: 10px; /*  Ширина линии */
+    stroke: #ccc;  /*  Цвет линии */
+}
+
+.circle_above {
+    stroke: green;
+    stroke-dasharray: 251;
+    stroke-dashoffset: 251;  /*  растояние от пунктира до пунктира */
+    animation: fill 100s linear infinite; /*  Применили анимацию fill */
+    animation-play-state: paused; /*  Постановка анимации на паузу */
+    animation-delay: -5s; /*  если свойство с отритцательным значением то анимация начнется с 5 секунды */
+
+}
+
+
+/*  Простая анимация */
+@keyframes fill {
+    frome {
+        stroke-dashoffset: 251;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
